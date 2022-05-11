@@ -29,6 +29,9 @@ services:
         target: /var/lib/mysql
         volume:
           nocopy: true
+      - type: bind
+        source: ./docker/db/my.cnf
+        target: /etc/mysql/conf.d/my.cnf
     environment:
       - MYSQL_DATABASE=${DB_NAME:-rails_db}
       - MYSQL_USER=${DB_USER:-rails_user}
