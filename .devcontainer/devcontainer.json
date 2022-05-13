@@ -1,0 +1,21 @@
+{
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "web",
+	"workspaceFolder": "/myapp",
+	"settings": {
+		"ruby.useBundler": true,
+		"ruby.lint": {
+			"rubocop": { 
+			"useBundler": true 
+			}
+		},
+		"ruby.format": "rubocop" 
+	},
+	"extensions": [
+		"rebornix.ruby",
+		"bung87.rails"
+	],
+	"shutdownAction": "stopCompose"
+}
